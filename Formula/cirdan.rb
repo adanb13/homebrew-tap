@@ -1,34 +1,34 @@
-# Homebrew formula for Cirdan's zero-Python standalone binary.
+# Homebrew formula TEMPLATE for Cirdan's zero-Python standalone binary.
 #
-# This lives in a tap repo (e.g. github.com/adanb13/homebrew-tap as Formula/
-# cirdan.rb) so users can:  brew install adanb13/tap/cirdan
+# This is the source of truth for the formula published to the tap repo
+# (github.com/adanb13/homebrew-tap as Formula/cirdan.rb), enabling:
+#   brew install adanb13/tap/cirdan
 #
-# The url/sha256 per platform point at the release assets uploaded by
-# .github/workflows/release-npm.yml (cirdan-<target>). On each release, bump
-# `version`, the URLs, and fill the sha256 values (e.g. `shasum -a 256 cirdan-*`).
-# A tap update can be automated from the release workflow.
+# The `update-homebrew` job in .github/workflows/release-npm.yml fills the
+# version + per-platform sha256 placeholders from the release assets and pushes
+# the result to the tap on every release. The placeholder values below are
+# sentinels the job rewrites — do not treat them as real.
 class Cirdan < Formula
   desc "AI infrastructure cartographer and MCP server"
   homepage "https://github.com/adanb13/cirdan"
-  version "0.8.1"
+  version "0.8.2"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.8.1/cirdan-darwin-arm64"
-      sha256 "e26cabac4a090ea35fe6d3c2fdd9ffde9074fd8bdeb552515977fdf8c1cae5f1"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.8.2/cirdan-darwin-arm64"
+      sha256 "32ca305ec0c167589c04a56cd4e1fae5217ca8c18303fbcc8ad694f60d5077f2"
     end
-    # Intel macOS (darwin-x64) is no longer built — Apple Silicon only.
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.8.1/cirdan-linux-arm64"
-      sha256 "5758fbe9d911dca5f65637fe910015e16cb12648a99c20e5c993eeac4c7db9c0"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.8.2/cirdan-linux-arm64"
+      sha256 "8f358252bd2f09569202e369aeae27aabf36553c412ec146c0dcfc3c3039cf05"
     end
     on_intel do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.8.1/cirdan-linux-x64"
-      sha256 "e67a2a97bffb1c89f52fa5d64f7bfe667128aa51906087eb562a81d33d74c311"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.8.2/cirdan-linux-x64"
+      sha256 "263c196167b8d6ccd2ae1a7d51221097f0eeda70870ea94b01746112e04bf24e"
     end
   end
 
