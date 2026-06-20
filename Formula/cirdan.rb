@@ -11,24 +11,24 @@
 class Cirdan < Formula
   desc "AI infrastructure cartographer and MCP server"
   homepage "https://github.com/adanb13/cirdan"
-  version "0.10.0"
+  version "0.11.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.10.0/cirdan-darwin-arm64"
-      sha256 "9badb00fb5cb982e76e947ccf50e35a5ac9ee142f5bb3fef22d9ca7293b6a36e"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.11.0/cirdan-darwin-arm64"
+      sha256 "7d935fce87b03b9dceb3ff89d7e3c1742e387189537714d68ed865b962b5efd4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.10.0/cirdan-linux-arm64"
-      sha256 "20b9d70d105c40012808cb2cc53bc1783418fa2fc01c59b5410482303cf8367e"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.11.0/cirdan-linux-arm64"
+      sha256 "547425a1f023e25568745cb69f336106a4888dbb7d1c586a62e4609a5d8a63f9"
     end
     on_intel do
-      url "https://github.com/adanb13/cirdan/releases/download/v0.10.0/cirdan-linux-x64"
-      sha256 "ac1957efeb3eb4c734079f1c18caa9f95e3515762adee5c55619fa5ee27802f1"
+      url "https://github.com/adanb13/cirdan/releases/download/v0.11.0/cirdan-linux-x64"
+      sha256 "951ea3a96422489bda73cd80405022c59e846c1649c737539f1795598796a707"
     end
   end
 
